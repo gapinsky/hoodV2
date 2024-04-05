@@ -27,7 +27,10 @@
 </head>
 
 <body>
-
+    <div id="loading-scr" class="flex-col">
+        <img id="loading-gif" src="/img/loader-gif.gif" alt="ikona ładowania">
+        <p>Ładowanie</p>
+    </div>
     <header>
         <nav class="navbar">
             <a href="#hero">
@@ -101,292 +104,263 @@
 
             </div>
         </section>
-        <section class="localizations">
-            <h2 class="section-title">Filie</h2>
-            <div class="accordion-box">
-                <div class="accordion">
-                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Bobolice</button>
-                    <div class="accordion-info">
-                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Miejsko -
-                            Gminny
-                            Ośrodek Kultury w Bobolicach
-                            Plac Zwycięstwa 5</p>
-                        <ul class="accordion-info-list noClose">
-                            <li class=" list-header noClose">Środa</li>
-                            <li class="list-item noClose">Akrobatyka 6-8 lat <span
-                                    class="accordion-info-list-time noClose">16:30-17:30</span></li>
-                            <li class="list-item noClose">Akrobatyka 9-13 lat <span
-                                    class="accordion-info-list-time noClose">17:30-18:30</span></li>
-                        </ul>
-                        <p class="accordion-info-text noClose price">Koszt: 140zł/miesiąc</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Biały bór</button>
-                    <div class="accordion-info">
-                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Białoborskie
-                            Centrum Kultury i Sportu ul. Tamka 3</p>
-                        <ul class="accordion-info-list noClose">
-                            <li class=" list-header noClose">Środa</li>
-                            <li class="list-item noClose">Zajęcia taneczne 3-5 lat<span
-                                    class="accordion-info-list-time noClose">16:00-16:45</span></li>
-                            <li class="list-item noClose">Taniec nowoczesny 6-7 lat<span
-                                    class="accordion-info-list-time noClose">16:45-17:45</span></li>
-                            <li class="list-item noClose">Hiphop 8-13 lat<span
-                                    class="accordion-info-list-time noClose">17:45-18:45</span></li>
-                        </ul>
-                        <p class="accordion-info-text noClose price">Koszt: 80zł/miesiąc</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Polanów</button>
-                    <div class="accordion-info">
-                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Polanowski
-                            Ośrodek Kultury i Sportu ul. Polna 4</p>
-                        <ul class="accordion-info-list noClose">
-                            <li class=" list-header noClose">Czwartek</li>
-                            <li class="list-item noClose">Zajęcia taneczne 4-6 lat<span
-                                    class="accordion-info-list-time noClose">16:00-17:00</span></li>
-                            <li class="list-item noClose">Hiphop 7-13 lat <span
-                                    class="accordion-info-list-time noClose">17:00-18:30</span></li>
-                        </ul>
-                        <p class="accordion-info-text noClose price">Koszt: 110zł/miesiąc - zajęcia dla 4-6 latków</p>
-                        <p class="accordion-info-text noClose price">Koszt: 140zł/miesiąc - Hiphop 7-13 lat</p>
-                    </div>
-                </div>
-
-            </div>
 
 
-            <table></table>
-        </section>
 
 
-        </section>
         <section class="standard staff" id="staff">
             <h2 class="section-title">Kadra</h2>
             <div class="staff-box">
 
                 <div class="staff-card" data-aos="zoom-in" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-talita">
-                    <img src="./img/staff/talita.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/talita.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Talita Jarzęcka</p>
                         <p class="staff-card-role">CEO</p>
                     </div>
                 </div>
                 <dialog class="staffCardModal" id="staffCardModal-talita">
-                    <div class="img-box">
+                    <div class="staffCardModal-container">
 
-                        <img src="./img/staff/talita.jpg" alt="">
-                        <h5>Talita Jarzęcka</h5>
-                        <h6>CEO</h6>
-                    </div>
-                    <div class="staffCardModal-textBox">
 
-                        <p>
-                            Doświadczona tancerka, absolwentka Szkoły Muzycznej im. Grażyny Bacewicz w Koszalinie na
-                            wydziale Rytmiki, obecnie rozwija się na Akademii Muzycznej w Łodzi na wydziale sztuk
-                            scenicznych. Taniec od zawsze był, jest i będzie jej pasją. Na swoim koncie ma liczne
-                            sukcesy jako choreograf i trener. Talita jest certyfikowanym instruktorem tańca, mimo to
-                            nieustannie zwiększa swoje kwalifikacje, zarówno w Polsce jak i za granicą. Jej marzeniem i
-                            celem jest rozwinąć i wyposażyć młode pokolenie.</p>
+
+                        <img src="./img/staff/talita.jpg" alt="zdjęcie instruktora">
+
+                        <!-- <button class="btn-previous">
+                            <i class="fa-sharp fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="btn-next"> <i class="fa-sharp fa-solid fa-chevron-right"></i> </button> -->
+
+
+                        <div class="staffCardModal-textBox">
+                            <h5>Talita Jarzęcka</h5>
+                            <h6>CEO</h6>
+                            <p>
+                                Doświadczona tancerka, absolwentka Szkoły Muzycznej im. Grażyny Bacewicz w Koszalinie na
+                                wydziale Rytmiki, obecnie rozwija się na Akademii Muzycznej w Łodzi na wydziale sztuk
+                                scenicznych. Taniec od zawsze był, jest i będzie jej pasją. Na swoim koncie ma liczne
+                                sukcesy jako choreograf i trener. Talita jest certyfikowanym instruktorem tańca, mimo to
+                                nieustannie zwiększa swoje kwalifikacje, zarówno w Polsce jak i za granicą. Jej
+                                marzeniem i celem jest rozwinąć i wyposażyć młode pokolenie.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
 
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-adrianna">
 
-                    <img src="./img/staff/adrianna.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/adrianna.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Adrianna Jendroszek</p>
                         <p class="staff-card-role">Zajęcia aktorskie</p>
                     </div>
                 </div>
                 <dialog class="staffCardModal" id="staffCardModal-adrianna">
-                    <div class="img-box">
-
-                        <img src="./img/staff/adrianna.jpg" alt="">
-                        <h5>Adrianna Jendroszek</h5>
-                        <h6>Zajęcia aktorskie</h6>
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/adrianna.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Adrianna Jendroszek</h5>
+                            <h6>Zajęcia aktorskie</h6>
+                            <p>Absolwentka Wydziału Aktorskiego wrocławskiej Filii Akademii Sztuk Teatralnych im.
+                                Stanislawa
+                                Wyspiań skiego z tytułem magistra sztuki. Od stycznia 2019 roku etatowa aktorka
+                                Bałtyckiego
+                                Teatru Dramatycznego im. Juliusza Słowackiego w Koszalinie. Współpracuje także z
+                                legnickim
+                                Teatrem im. Heleny Modrzewskiej oraz wrocławskim Teatrem Muzycznym Capitol. Zawodowo
+                                zajmuje
+                                się także lektorką (czyta audiobooki, nagrywa reklamy, prezentacje, spoty).
+                                Uczestniczyła w
+                                licznych warsztatach teatralnych, wokalnych i tanecznych. Wolontaryjnie udzielała się w
+                                hospicjach dziecięcych. Ada to niesamowicie pogodna i pozytywna osoba. Będzie prowadziła
+                                zajęcia aktorskie , dbała o to żebyście dobrze czuli się na scenie ,będzie pracowała nad
+                                waszą dykcją oraz otwartością i swobodą wypowiadania się! Podczas zajęć z Adą nauczycie
+                                się
+                                między innymi jak nagrać dobry selftape i przygotwać się do castingów!</p>
+                        </div>
+                        <button class="staffCardModalClose white" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Absolwentka Wydziału Aktorskiego wrocławskiej Filii Akademii Sztuk Teatralnych im. Stanislawa
-                            Wyspiań skiego z tytułem magistra sztuki. Od stycznia 2019 roku etatowa aktorka Bałtyckiego
-                            Teatru Dramatycznego im. Juliusza Słowackiego w Koszalinie. Współpracuje także z legnickim
-                            Teatrem im. Heleny Modrzewskiej oraz wrocławskim Teatrem Muzycznym Capitol. Zawodowo zajmuje
-                            się także lektorką (czyta audiobooki, nagrywa reklamy, prezentacje, spoty). Uczestniczyła w
-                            licznych warsztatach teatralnych, wokalnych i tanecznych. Wolontaryjnie udzielała się w
-                            hospicjach dziecięcych. Ada to niesamowicie pogodna i pozytywna osoba. Będzie prowadziła
-                            zajęcia aktorskie , dbała o to żebyście dobrze czuli się na scenie ,będzie pracowała nad
-                            waszą dykcją oraz otwartością i swobodą wypowiadania się! Podczas zajęć z Adą nauczycie się
-                            między innymi jak nagrać dobry selftape i przygotwać się do castingów!</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000" data-dialog="staffCardModal-sandra">
-                    <img src="./img/staff/sandra tracz.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/sandra tracz.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Sandra Tracz
                         </p>
                         <p class="staff-card-role">Zajęcia indywidualne/grupowe</p>
                     </div>
                 </div>
+
                 <dialog class="staffCardModal" id="staffCardModal-sandra">
-                    <div class="img-box">
-
-                        <img src="./img/staff/sandra tracz.jpg" alt="">
-                        <h5>Sandra Tracz</h5>
-                        <h6>Zajęcia indywidualne/grupowe</h6>
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/sandra tracz.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Sandra Tracz</h5>
+                            <h6>Zajęcia indywidualne/grupowe</h6>
+                            <p>Sandra to tancerka i kompozytorka z wieloletnim doświadczeniem. Na swoim koncie ma udział
+                                w
+                                różnych projektach tanecznych i osiągnięcia na zawodach w technice hiphop i house.
+                                Sandra
+                                jest absolwentką Szkoły Muzycznej na wydziale rytmiki w Koszalinie ,obecnie studiuje na
+                                Akademii Muzycznej w Gdańsku
+                                👉🏼Dzięki jej pomocy łatwiej wczujecie się w rytm tańca i z łatwością będziecie umieli
+                                podkreślić ruchami ciała poszczególne frazy muzyczne 🎶
+                                Sandra prowadzi lekcje indywidualne oraz zajęcia grupowe.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Sandra to tancerka i kompozytorka z wieloletnim doświadczeniem. Na swoim koncie ma udział w
-                            różnych projektach tanecznych i osiągnięcia na zawodach w technice hiphop i house. Sandra
-                            jest absolwentką Szkoły Muzycznej na wydziale rytmiki w Koszalinie ,obecnie studiuje na
-                            Akademii Muzycznej w Gdańsku
-                            👉🏼Dzięki jej pomocy łatwiej wczujecie się w rytm tańca i z łatwością będziecie umieli
-                            podkreślić ruchami ciała poszczególne frazy muzyczne 🎶
-                            Sandra prowadzi lekcje indywidualne oraz zajęcia grupowe.</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000" data-dialog="staffCardModal-joanna">
-                    <img src="./img/staff/joanna.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/joanna.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Joanna Mazurek</p>
                         <p class="staff-card-role">Nowożeńcy</p>
                     </div>
                 </div>
                 <dialog class="staffCardModal" id="staffCardModal-joanna">
-                    <div class="img-box">
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/joanna.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Joanna Mazurek</h5>
+                            <h6>Nowożeńcy</h6>
 
-                        <img src="./img/staff/joanna.jpg" alt="">
-                        <h5>Joanna Mazurek</h5>
-                        <h6>Nowożeńcy</h6>
+                            <p>Na scenie spędziła 11 pięknych lat, dziś spełnia się jako choreograf PAR MŁODYCH, którym
+                                oddaje całe swoje serce. Do każdej młodej pary podchodzi indywidualnie, słucha i
+                                wspólnie
+                                ustala plan działania. Swoją pasję i wiele lat nauki przekazuje najlepiej jak potrafi na
+                                każdych zajęciach. Z dozą cierpliwości i uśmiechem na twarzy stworzycie razem coś
+                                pięknego i
+                                wyjątkowego.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Na scenie spędziła 11 pięknych lat, dziś spełnia się jako choreograf PAR MŁODYCH, którym
-                            oddaje całe swoje serce. Do każdej młodej pary podchodzi indywidualnie, słucha i wspólnie
-                            ustala plan działania. Swoją pasję i wiele lat nauki przekazuje najlepiej jak potrafi na
-                            każdych zajęciach. Z dozą cierpliwości i uśmiechem na twarzy stworzycie razem coś pięknego i
-                            wyjątkowego.</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-krzysztof">
-                    <img src="./img/staff/krzysztof.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/krzysztof.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Krzysztof Wikowicz</p>
                         <p class="staff-card-role">Akrobatyka</p>
                     </div>
                 </div>
+
                 <dialog class="staffCardModal" id="staffCardModal-krzysztof">
-                    <div class="img-box">
-                        <img src="./img/staff/krzysztof.jpg" alt="">
-                        <h5>Krzysztof Wikowicz</h5>
-                        <h6>Akrobatyka</h6>
-
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/krzysztof.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Krzysztof Wikowicz</h5>
+                            <h6>Akrobatyka</h6>
+                            <p>Certyfikowany trener akrobatyki , tancerz z wieloletnim doświadczeniem. Pasjonata i
+                                trener z
+                                niesamowitym podejściem do dzieci.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Certyfikowany trener akrobatyki , tancerz z wieloletnim doświadczeniem. Pasjonata i trener z
-                            niesamowitym podejściem do dzieci.</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-magdalena">
-                    <img src="./img/staff/magdalena.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/magdalena.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Magdalena Sokołowska-Japona</p>
                         <p class="staff-card-role">Hip-hop/House</p>
                     </div>
                 </div>
+
                 <dialog class="staffCardModal" id="staffCardModal-magdalena">
-                    <div class="img-box">
-                        <img src="./img/staff/magdalena.jpg" alt="">
-                        <h5>Magdalena Sokołowska-Japona</h5>
-                        <h6>Hip-hop/House</h6>
-
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/magdalena.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Magdalena Sokołowska-Japona</h5>
+                            <h6>Hip-hop/House</h6>
+                            <p>
+                                Pseudonim artystyczny Japona, czyli Magdalena Sokołowska. Z tańcem związana od 14-stego
+                                roku
+                                życia Japona jest dyplomowanym instruktorem tańca o specjalizacji Hip-hop. Style w
+                                których
+                                najlepiej się czuje to Hip-hop i House. Z wykształcenia podolog fizjoterapeuta oraz
+                                inżynier
+                                ds. bezpieczeństwa i żywności człowieka, jednak to taniec towarzyszy jej na codzień. Dla
+                                siebie tańczy również waacking, high heels Uwielbia prace z młodzieżą.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>
-                            Pseudonim artystyczny Japona, czyli Magdalena Sokołowska. Z tańcem związana od 14-stego roku
-                            życia Japona jest dyplomowanym instruktorem tańca o specjalizacji Hip-hop. Style w których
-                            najlepiej się czuje to Hip-hop i House. Z wykształcenia podolog fizjoterapeuta oraz inżynier
-                            ds. bezpieczeństwa i żywności człowieka, jednak to taniec towarzyszy jej na codzień. Dla
-                            siebie tańczy również waacking, high heels Uwielbia prace z młodzieżą.</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-daniela">
-                    <img src="./img/staff/daniela.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/daniela.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Daniela Kolańska</p>
                         <p class="staff-card-role">Taniec współczesny</p>
                     </div>
                 </div>
+
                 <dialog class="staffCardModal" id="staffCardModal-daniela">
-                    <div class="img-box">
-
-                        <img src="./img/staff/daniela.jpg" alt="">
-                        <h5>Daniela Kolańska</h5>
-                        <h6>Taniec współczesny</h6>
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/daniela.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Daniela Kolańska</h5>
+                            <h6>Taniec współczesny</h6>
+                            <p>Absolwentka Szkoły Muzycznej I i II stopnia w Koszalinie na wydziale Rytmiki. Obecnie
+                                studentka III roku na Akademi Wychowania Fizycznego w Poznaniu na kierunku Taniec w
+                                Kulturze
+                                Fizycznej , specjalizacji Choreoterapia, czyli terapia tańcem. Taniec towarzyszy jej od
+                                najmłodszych lat. Specjalizuje się w technice tańca współczesnego. Od zawsze kształci
+                                się
+                                pod okiem wybitnych instruktorów i choreografów takich jak: Jose de la Cruze, Jean
+                                Claude
+                                Marignale, Pulina Wycichowska, Agnieszka Doberska, Paweł Malicki, Andrzej Adamczak,
+                                Adrian
+                                Radwański. Posiada dużo wiedzy nie tylko praktycznej ale i teoretycznej z zakresu tańca.
+                                Jej
+                                celem jest szerzenie terapeutycznych aspektów tańca. Zawsze podchodzi w swojej pracy
+                                indywidualnie do każdego z tancerzy, tak aby wychodzili poza schematy i stawali się
+                                unikatowi w swojej przyszłej twórczości.</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Absolwentka Szkoły Muzycznej I i II stopnia w Koszalinie na wydziale Rytmiki. Obecnie
-                            studentka III roku na Akademi Wychowania Fizycznego w Poznaniu na kierunku Taniec w Kulturze
-                            Fizycznej , specjalizacji Choreoterapia, czyli terapia tańcem. Taniec towarzyszy jej od
-                            najmłodszych lat. Specjalizuje się w technice tańca współczesnego. Od zawsze kształci się
-                            pod okiem wybitnych instruktorów i choreografów takich jak: Jose de la Cruze, Jean Claude
-                            Marignale, Pulina Wycichowska, Agnieszka Doberska, Paweł Malicki, Andrzej Adamczak, Adrian
-                            Radwański. Posiada dużo wiedzy nie tylko praktycznej ale i teoretycznej z zakresu tańca. Jej
-                            celem jest szerzenie terapeutycznych aspektów tańca. Zawsze podchodzi w swojej pracy
-                            indywidualnie do każdego z tancerzy, tak aby wychodzili poza schematy i stawali się
-                            unikatowi w swojej przyszłej twórczości.</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
                 <div class="staff-card" data-aos="zoom-in" data-aos-duration="1000"
                     data-dialog="staffCardModal-magdalenaG">
-                    <img src="./img/staff/magdalena-gwozdz.jpg" class="staff-card-photo" alt="">
+                    <img src="./img/staff/magdalena-gwozdz.jpg" class="staff-card-photo" alt="zdjęcie instruktora">
                     <div class="staff-card-text">
                         <p class="staff-card-title">Magdalena Gwóźdź</p>
                         <p class="staff-card-role">Zajęcia taneczne dla 4-6 latków</p>
                     </div>
                 </div>
+
                 <dialog class="staffCardModal" id="staffCardModal-magdalenaG">
-                    <div class="img-box">
-
-                        <img src="./img/staff/magdalena-gwozdz.jpg" alt="">
-                        <h5>Magdalena Gwóźdź</h5>
-                        <h6>Zajęcia taneczne dla 4-6 latków</h6>
+                    <div class="staffCardModal-container">
+                        <img src="./img/staff/magdalena-gwozdz.jpg" alt="zdjęcie instruktora">
+                        <div class="staffCardModal-textBox">
+                            <h5>Magdalena Gwóźdź</h5>
+                            <h6>Zajęcia taneczne dla 4-6 latków</h6>
+                            <p>Poznajcie Gosię ! Gosia przyjechała do nas z Krakowa i zamierza tu zostać na dłużej 😁
+                                Spotkacie ją na zajęciach dla naszych najmłodszych uczestników 👧🏼👦🏻
+                                Gosia jest z zawodu logopedą👩🏼‍🏫 Praca z dziećmi to jedno z jej ulubionych zajęć🥰 Na
+                                przestrzeni lat 2018-2020 uczestniczyła w licznych masterclassach, campach tanecznych
+                                maratonach zumbowych prowadzonych m.in przez Izę Kin ZES - Emilę Furman ZES (Zumba
+                                Education
+                                Specialist) , Łukasza Grabowskiego, Sebastiana Nabielca i wielu innych. Dziś chce
+                                dzielić
+                                się swoją wiedzą i pasją z innymi 🫶🏼
+                                Na zajęciach dla 4-6 latków Twój maluch ✅Nauczy się podstawowych kroków tanecznych
+                                ✅Energiczna muzyka sprawi, że maluch będzie się dobrze bawił, a przy tym rozwijał
+                                ✅ Nawiąże nowe relacje z rówieśnikami i nabędzie umiejętności współdziałania grupie,
+                                akceptacji samego siebie i innych, poszukiwania i pokonywania barier swoich możliwości.
+                                ✅Taniec rozwija pamięć , spostrzegawczość, uwagę, orientacje, wyobraźnie i inteligencję
+                                twórczą</p>
+                        </div>
+                        <button class="staffCardModalClose" id="staffCardModalClose"><i
+                                class="fas fa-times"></i></button>
                     </div>
-                    <div class="staffCardModal-textBox">
-
-                        <p>Poznajcie Gosię ! Gosia przyjechała do nas z Krakowa i zamierza tu zostać na dłużej 😁
-                            Spotkacie ją na zajęciach dla naszych najmłodszych uczestników 👧🏼👦🏻
-                            Gosia jest z zawodu logopedą👩🏼‍🏫 Praca z dziećmi to jedno z jej ulubionych zajęć🥰 Na
-                            przestrzeni lat 2018-2020 uczestniczyła w licznych masterclassach, campach tanecznych
-                            maratonach zumbowych prowadzonych m.in przez Izę Kin ZES - Emilę Furman ZES (Zumba Education
-                            Specialist) , Łukasza Grabowskiego, Sebastiana Nabielca i wielu innych. Dziś chce dzielić
-                            się swoją wiedzą i pasją z innymi 🫶🏼
-                            Na zajęciach dla 4-6 latków Twój maluch ✅Nauczy się podstawowych kroków tanecznych
-                            ✅Energiczna muzyka sprawi, że maluch będzie się dobrze bawił, a przy tym rozwijał
-                            ✅ Nawiąże nowe relacje z rówieśnikami i nabędzie umiejętności współdziałania grupie,
-                            akceptacji samego siebie i innych, poszukiwania i pokonywania barier swoich możliwości.
-                            ✅Taniec rozwija pamięć , spostrzegawczość, uwagę, orientacje, wyobraźnie i inteligencję
-                            twórczą</p>
-                    </div>
-                    <button class="staffCardModalClose" id="staffCardModalClose"><i class="fas fa-times"></i></button>
                 </dialog>
             </div>
         </section>
@@ -397,16 +371,19 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.4151146167796!2d16.191388499999995!3d54.19043359999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4701cdd275367db1%3A0x9d5fd845442ce6ca!2sHoodmood%20Dance%20Studio!5e0!3m2!1spl!2spl!4v1708127396216!5m2!1spl!2spl"
                     width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-info-container flex-col" data-aos="zoom-in" data-aos-duration="1000">
 
-                <div class="map-info" data-aos="zoom-in" data-aos-duration="1000">
-                    <h4>kontakt</h4>
-                    <p><img src="./svg/white-pin-alt-svgrepo-com.svg" alt="ikona pinezki">
-                        Zwycięstwa 115, 75-211 Koszalin</p>
-                    <p><img src="./svg/white-mail-01-svgrepo-com.svg" alt="ikona koperty">
-                        hoodmood.recepcja@gmail.com
-                    </p>
-                    <p><img src="./svg/white-telephone-phone-svgrepo-com.svg" alt="ikona telefonu">
-                        +48 577 198 599</p>
+                    <h4>kontakt:</h4>
+                    <div class="map-info">
+
+                        <p><img src="./svg/white-pin-alt-svgrepo-com.svg" alt="ikona pinezki">
+                            Zwycięstwa 115, 75-211 Koszalin</p>
+                        <p><img src="./svg/white-mail-01-svgrepo-com.svg" alt="ikona koperty">
+                            hoodmood.recepcja@gmail.com
+                        </p>
+                        <p><img src="./svg/white-telephone-phone-svgrepo-com.svg" alt="ikona telefonu">
+                            +48 577 198 599</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -551,7 +528,67 @@
             </div>
             <button class="download-schedule basic-btn"><a href="./pdf/jpg2pdf.pdf" attributes-list
                     download="hoodmood-grafik2024">Pobierz grafik</a></button>
+
         </section>
+        <section class="localizations">
+            <h2 class="section-title">Filie</h2>
+            <div class="accordion-box">
+                <div class="accordion">
+                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Bobolice</button>
+                    <div class="accordion-info">
+                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Miejsko -
+                            Gminny
+                            Ośrodek Kultury w Bobolicach
+                            Plac Zwycięstwa 5</p>
+                        <ul class="accordion-info-list noClose">
+                            <li class=" list-header noClose">Środa</li>
+                            <li class="list-item noClose">Akrobatyka 6-8 lat <span
+                                    class="accordion-info-list-time noClose">16:30-17:30</span></li>
+                            <li class="list-item noClose">Akrobatyka 9-13 lat <span
+                                    class="accordion-info-list-time noClose">17:30-18:30</span></li>
+                        </ul>
+                        <p class="accordion-info-text noClose price">Koszt: 140zł/miesiąc</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Biały bór</button>
+                    <div class="accordion-info">
+                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Białoborskie
+                            Centrum Kultury i Sportu ul. Tamka 3</p>
+                        <ul class="accordion-info-list noClose">
+                            <li class=" list-header noClose">Środa</li>
+                            <li class="list-item noClose">Zajęcia taneczne 3-5 lat<span
+                                    class="accordion-info-list-time noClose">16:00-16:45</span></li>
+                            <li class="list-item noClose">Taniec nowoczesny 6-7 lat<span
+                                    class="accordion-info-list-time noClose">16:45-17:45</span></li>
+                            <li class="list-item noClose">Hiphop 8-13 lat<span
+                                    class="accordion-info-list-time noClose">17:45-18:45</span></li>
+                        </ul>
+                        <p class="accordion-info-text noClose price">Koszt: 80zł/miesiąc</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <button class="accordion-btn" id="accordion-btn"><i class="fas fa-plus"></i>Polanów</button>
+                    <div class="accordion-info">
+                        <p class="accordion-info-text noClose"><span class="noClose address">Adres:</span> Polanowski
+                            Ośrodek Kultury i Sportu ul. Polna 4</p>
+                        <ul class="accordion-info-list noClose">
+                            <li class=" list-header noClose">Czwartek</li>
+                            <li class="list-item noClose">Zajęcia taneczne 4-6 lat<span
+                                    class="accordion-info-list-time noClose">16:00-17:00</span></li>
+                            <li class="list-item noClose">Hiphop 7-13 lat <span
+                                    class="accordion-info-list-time noClose">17:00-18:30</span></li>
+                        </ul>
+                        <p class="accordion-info-text noClose price">Koszt: 110zł/miesiąc - zajęcia dla 4-6 latków</p>
+                        <p class="accordion-info-text noClose price">Koszt: 140zł/miesiąc - Hiphop 7-13 lat</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
         <section class="standard contact" id="contact">
             <h2 class="section-title">Zapisz się</h2>
             <div class="form-box" data-aos="fade-right" data-aos-duration="1500">
@@ -584,7 +621,7 @@
                             <textarea name="message" id="message" placeholder="Chciał(a)bym zapisać się na zajęcia..."
                                 required></textarea>
                         </div>
-                        <button type="button" id="submit" class="submit-btn">Wyślij</button>
+                        <button type="submit" id="submit" class="submit-btn">Wyślij</button>
                     </form>
                     <dialog class="modal" id="modal">
                         <img src="/svg/cross-svgrepo-com.svg" alt="ikona krzyżyka" class="cross-btn" id="cross-btn">

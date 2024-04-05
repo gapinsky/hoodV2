@@ -149,7 +149,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0px;
 }
 
 * {
@@ -158,6 +158,20 @@
   padding: 0;
   scroll-margin-top: 3em;
   scroll-behavior: smooth;
+}
+
+#loading-scr {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(253, 253, 253);
+  position: fixed;
+  z-index: 100000;
+}
+#loading-scr #loading-gif {
+  width: 4em;
+}
+#loading-scr p {
+  margin-top: 1em;
 }
 
 section {
@@ -471,7 +485,6 @@ header nav i {
 }
 .about-us-video {
   aspect-ratio: 16/9;
-  border-radius: 10px;
   box-shadow: 0 3px 5px black;
   overflow: hidden;
 }
@@ -494,7 +507,8 @@ header nav i {
   transition: transform 0.3s;
 }
 .about-us-text .basic-btn:hover {
-  transform: scale(90%);
+  cursor: pointer;
+  transform: scale(95%);
 }
 
 .localizations .accordion-box {
@@ -582,7 +596,6 @@ header nav i {
   display: flex;
   flex-direction: column;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
   overflow: hidden;
 }
 .staff-box .staff-card .staff-card-text {
@@ -592,7 +605,7 @@ header nav i {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   color: rgb(255, 255, 255);
 }
 .staff-box .staff-card-title {
@@ -604,10 +617,10 @@ header nav i {
 }
 .staff-box .staff-card:hover {
   cursor: pointer;
+  transform: scale(105%);
 }
 .staff-box .staffCardModal {
-  width: 90svw;
-  max-width: 700px;
+  overflow: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -615,49 +628,42 @@ header nav i {
   background-color: white;
   z-index: 5;
   border: transparent;
-  border-radius: 0.5em;
-  box-shadow: 0 3px 5px black;
 }
-.staff-box .staffCardModal .img-box h5 {
-  text-align: center;
-  font-size: 1.5rem;
+.staff-box .staffCardModal-container {
+  width: 90svw;
 }
-.staff-box .staffCardModal .img-box h6 {
-  text-align: center;
-  font-size: 1rem;
-}
-.staff-box .staffCardModal .img-box img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.staff-box .staffCardModal-container img {
+  width: 101%;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: top;
      object-position: top;
 }
-.staff-box .staffCardModal .staffCardModal-textBox {
-  max-height: 15em;
-  overflow-y: auto;
+.staff-box .staffCardModal-container .staffCardModal-textBox h5 {
+  text-align: center;
+  font-size: 1.5rem;
 }
-.staff-box .staffCardModal .staffCardModal-textBox p {
-  padding: 0.7em;
+.staff-box .staffCardModal-container .staffCardModal-textBox h6 {
+  text-align: center;
+  font-size: 1rem;
 }
-.staff-box .staffCardModal .staffCardModalClose {
+.staff-box .staffCardModal-container .staffCardModalClose {
   padding: 0.25em;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   margin: 0.1em;
   font-size: 1.5rem;
   border: transparent;
   background: transparent;
-  color: rgb(209, 81, 117);
-  transition: color 0.1s linear;
 }
-.staff-box .staffCardModal .staffCardModalClose:hover {
+.staff-box .staffCardModal-container .staffCardModalClose:hover {
   cursor: pointer;
-  color: rgb(209, 81, 117);
 }
 .staff-box .staffCardModal::backdrop {
-  background: rgba(0, 0, 0, 0.322);
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(0.15em);
+          backdrop-filter: blur(0.15em);
 }
 
 .modal-open {
@@ -728,14 +734,9 @@ header nav i {
   text-transform: uppercase;
 }
 .map iframe {
-  max-width: 1000px;
-  border-radius: 1em;
   box-shadow: 0 2px 5px black;
 }
-.map-info {
-  margin-block: 1em;
-}
-.map-info h4 {
+.map h4 {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
@@ -911,8 +912,6 @@ header nav i {
   scroll-snap-type: inline mandatory;
 }
 .schedule-table table {
-  border-top-left-radius: 2em;
-  border-top-right-radius: 2em;
   background-color: rgba(0, 0, 0, 0.1215686275);
 }
 .schedule-table table th {
@@ -923,12 +922,6 @@ header nav i {
   font-weight: bold;
   text-shadow: 0 1px 2px black;
   background-image: linear-gradient(180deg, rgb(226, 84, 127) 25%, rgb(156, 49, 81) 55%);
-}
-.schedule-table table th:nth-child(1) {
-  border-top-left-radius: 1.5em;
-}
-.schedule-table table th:last-child {
-  border-top-right-radius: 1.5em;
 }
 .schedule-table table td {
   scroll-snap-align: center;
@@ -1047,7 +1040,7 @@ header nav i {
   border-radius: 1.5em;
   text-shadow: none;
   box-shadow: 0 3px 5px black;
-  animation: modalSlideIn 0.6s forwards ease-out;
+  animation: modalSlideIn 0.3s forwards ease-out;
 }
 .contact .modal .cross-btn {
   padding: 0.3em;
@@ -1208,6 +1201,9 @@ footer .footer-link:hover {
     justify-content: center;
     align-items: center;
   }
+  .map .map-info-container {
+    margin-top: 1em;
+  }
   footer .wrapper {
     display: flex;
     flex-direction: column;
@@ -1219,8 +1215,16 @@ footer .footer-link:hover {
     justify-content: space-evenly;
     align-items: center;
   }
-  .staffCardModal .img-box img {
-    max-height: 30em;
+  .staffCardModal-container .staffCardModal-textBox {
+    padding-bottom: 0.25em;
+  }
+  .staffCardModal-container .staffCardModal-textBox p {
+    padding: 0.75em;
+    max-height: 11em;
+    overflow-y: scroll;
+  }
+  .white {
+    color: white;
   }
 }
 @media (min-width: 576px) {
@@ -1343,22 +1347,30 @@ footer .footer-link:hover {
     z-index: -1;
   }
   .map-box {
-    min-width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 2em;
   }
+  .map-box iframe {
+    width: 90svw;
+  }
+  .map-box .map-info {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
   .map-box .map-info p {
     padding-block: 1em;
+    margin-inline: 1em;
     text-wrap: nowrap;
   }
   .map-box .map-info img {
     max-width: 2.5em;
     margin-bottom: -0.75em;
-  }
-  .staffCardModal .img-box {
-    margin: auto;
   }
   footer .wrapper {
     position: relative;
@@ -1414,6 +1426,31 @@ footer .footer-link:hover {
   .map-info {
     padding: 0.5em;
   }
+  .staffCardModal-container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .staffCardModal-container .staffCardModal-textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .staffCardModal-container h5 {
+    margin-top: 2em;
+  }
+  .staffCardModal-container h6 {
+    margin-top: 1em;
+  }
+  .staffCardModal-container p {
+    min-height: 15em;
+    margin-top: 2em;
+    margin: 1em;
+  }
+  .white {
+    color: black;
+  }
 }
 @media (min-width: 1200px) {
   .nav-item {
@@ -1440,11 +1477,8 @@ footer .footer-link:hover {
   .schedule-table table td {
     width: 20%;
   }
-  .staffCardModal .img-box img {
-    -o-object-position: center;
-       object-position: center;
-  }
-  .staffCardModal .staffCardModal-textBox {
-    padding-inline: 1em;
+  .staffCardModal-textBox p {
+    font-size: 1.1rem;
+    min-height: 20em;
   }
 }/*# sourceMappingURL=main.css.map */

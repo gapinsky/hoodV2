@@ -13,7 +13,7 @@ const closeMailBtn = document.getElementById('cross-btn');
 const mailModal = document.getElementById('modal');
 const okBtn = document.getElementById('ok-btn');
 const body = document.body;
-
+const loader = document.getElementById('loading-scr');
 const year = document.getElementById('year');
 const accordionBtns = document.querySelectorAll('#accordion-btn');
 
@@ -114,13 +114,13 @@ const showPricing = (e) => {
 const showMailModal = () => {
 	mailModal.showModal();
 	mailModal.classList.add('flex-col');
-	body.classList.add('no-scroll');
+	mailModal.classList.add('no-scroll');
 };
 
 const closeMailModal = () => {
 	mailModal.close();
 	mailModal.classList.remove('flex-col');
-	body.classList.remove('no-scroll');
+	mailModal.classList.remove('no-scroll');
 };
 
 const numValidation = () => {
@@ -168,9 +168,22 @@ const sendMail = () => {
 		emailjs
 			.send('service_u1hdvks', 'template_hjp9o5i', params)
 			.then(showMailModal());
+
 		clearForm();
 	}
 };
+
+window.addEventListener('click', (e) => {
+	if (e.target.classList.contains('modal')) {
+		console.log('object');
+		closeMailModal();
+	}
+	return;
+});
+
+window.addEventListener('load', () => {
+	loader.style.display = 'none';
+});
 
 navLinks.forEach((link) => link.addEventListener('click', closeNav));
 pricingBtns.forEach((btn) => btn.addEventListener('click', showPricing));

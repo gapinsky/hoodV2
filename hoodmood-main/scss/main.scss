@@ -1,7 +1,7 @@
 @use '_animations.scss';
 
 ::-webkit-scrollbar {
-	width: 0;
+	width: 0px;
 }
 
 * {
@@ -10,6 +10,21 @@
 	padding: 0;
 	scroll-margin-top: 3em;
 	scroll-behavior: smooth;
+}
+
+#loading-scr {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(253, 253, 253);
+	position: fixed;
+	z-index: 100000;
+
+	#loading-gif {
+		width: 4em;
+	}
+	p {
+		margin-top: 1em;
+	}
 }
 
 section {
@@ -345,7 +360,7 @@ header {
 	z-index: 2;
 	&-video {
 		aspect-ratio: 16/9;
-		border-radius: 10px;
+		// border-radius: 10px;
 		box-shadow: 0 3px 5px black;
 		overflow: hidden;
 	}
@@ -368,7 +383,8 @@ header {
 			transition: transform 0.3s;
 		}
 		.basic-btn:hover {
-			transform: scale(90%);
+			cursor: pointer;
+			transform: scale(95%);
 		}
 	}
 }
@@ -380,7 +396,6 @@ header {
 		flex-direction: column;
 		.accordion {
 			margin-block: 0.5em;
-
 			width: 95svw;
 			max-width: 40em;
 			.accordion-btn {
@@ -451,132 +466,6 @@ header {
 				display: block;
 			}
 		}
-		// .localization-card {
-		// 	position: relative;
-		// 	padding-block: 1em;
-		// 	margin-block: 2em;
-		// 	margin-inline: auto;
-		// 	max-width: 80%;
-		// 	display: flex;
-		// 	justify-content: space-evenly;
-		// 	align-items: center;
-		// 	flex-direction: column;
-
-		// 	border-radius: 2em;
-		// 	box-shadow: 0 2px 4px black;
-		// 	overflow: hidden;
-		// 	img {
-		// 		max-width: 7em;
-		// 	}
-		// 	h3 {
-		// 		margin-block: 0.2em;
-		// 		font-size: 1.5rem;
-		// 	}
-		// 	p {
-		// 		display: block;
-		// 		padding-block: 1em;
-		// 		max-width: 80%;
-		// 		margin: auto;
-		// 	}
-		// 	.local-card-btn {
-		// 		margin-block: 1em;
-		// 		padding: 0.8em 2em;
-		// 		font-size: 1rem;
-		// 		font-weight: bold;
-		// 		color: white;
-		// 		text-transform: uppercase;
-		// 		border-radius: 1.5em;
-		// 		border: transparent;
-		// 		background-image: linear-gradient(
-		// 			180deg,
-		// 			rgba(226, 84, 127, 1) 25%,
-		// 			rgba(156, 49, 81, 1) 95%
-		// 		);
-		// 		transition: 0.3s linear;
-		// 	}
-		// 	.local-card-btn:hover {
-		// 		cursor: pointer;
-		// 	}
-		// }
-
-		// .slide-info {
-		// 	padding-block: 1em;
-		// 	position: absolute;
-		// 	top: 200%;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	display: flex;
-		// 	align-items: center;
-		// 	flex-direction: column;
-		// 	background: white;
-
-		// 	h3 {
-		// 		text-transform: uppercase;
-		// 		z-index: 2;
-		// 		color: white;
-		// 		font-weight: bold;
-		// 	}
-		// 	h4 {
-		// 		font-size: 1.3rem;
-		// 		margin-block: 0.5em 1em;
-		// 		z-index: 2;
-		// 		color: white;
-		// 		font-weight: bold;
-		// 	}
-		// 	ul {
-		// 		margin-block: 0.5em;
-		// 		list-style: none;
-		// 		z-index: 2;
-		// 		border-radius: 1em;
-		// 		overflow: hidden;
-		// 		li {
-		// 			padding: 0.8em;
-		// 			background: rgba(0, 0, 0, 0.205);
-		// 			span {
-		// 				font-size: 0.9rem;
-		// 			}
-		// 		}
-		// 		li:nth-child(even) {
-		// 			background-color: rgba(0, 0, 0, 0.05);
-		// 		}
-		// 	}
-		// 	p {
-		// 		z-index: 2;
-		// 	}
-		// 	.undo-btn {
-		// 		border: transparent;
-		// 		background-color: transparent;
-		// 		transition: transform 0.3s linear;
-		// 		z-index: 2;
-		// 		img {
-		// 			max-width: 3em;
-		// 			transform: rotate(90deg);
-		// 		}
-		// 	}
-		// 	.undo-btn:hover {
-		// 		cursor: pointer;
-		// 	}
-		// }
-		// .slide-info::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	left: 0%;
-		// 	top: 0%;
-		// 	width: 100%;
-		// 	height: 35%;
-		// 	background-image: linear-gradient(
-		// 		180deg,
-		// 		rgba(226, 84, 127, 1) 25%,
-		// 		rgba(156, 49, 81, 1) 95%
-		// 	);
-		// 	background-size: contain;
-		// 	background-repeat: no-repeat;
-		// 	background-position: top;
-		// 	border-bottom-left-radius: 100%;
-		// 	border-bottom-right-radius: 100%;
-		// 	z-index: 1;
-		// }
 	}
 }
 
@@ -593,16 +482,16 @@ header {
 		display: flex;
 		flex-direction: column;
 		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-		border-radius: 5px;
+		// border-radius: 5px;
 		overflow: hidden;
-
+		// transition: scale 0.3s linear;
 		.staff-card-text {
 			width: 100%;
 			position: absolute;
 			bottom: -2px;
 			backdrop-filter: blur(3px);
 			text-align: center;
-			background-color: rgba(0, 0, 0, 0.2);
+			background-color: rgba(0, 0, 0, 0.4);
 			color: rgb(255, 255, 255);
 		}
 
@@ -616,10 +505,11 @@ header {
 	}
 	.staff-card:hover {
 		cursor: pointer;
+		transform: scale(105%);
 	}
 	.staffCardModal {
-		width: 90svw;
-		max-width: 700px;
+		overflow: hidden;
+		// max-width: 1200px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -627,60 +517,64 @@ header {
 		background-color: white;
 		z-index: 5;
 		border: transparent;
-		border-radius: 0.5em;
-		box-shadow: 0 3px 5px black;
 
-		.img-box {
-			h5 {
-				text-align: center;
-				font-size: 1.5rem;
-			}
-			h6 {
-				text-align: center;
-				font-size: 1rem;
-			}
+		&-container {
+			width: 90svw;
 			img {
-				width: 100%;
-
-				object-fit: cover;
+				width: 101%;
+				object-fit: contain;
 				object-position: top;
 			}
-		}
-		.staffCardModal-textBox {
-			max-height: 15em;
-			overflow-y: auto;
-
-			// h5 {
-			// 	text-align: center;
-			// 	font-size: 1.5rem;
-			// }
-			// h6 {
-			// 	text-align: center;
-			// 	font-size: 1rem;
-			// }
-			p {
-				padding: 0.7em;
+			.staffCardModal-textBox {
+				h5 {
+					text-align: center;
+					font-size: 1.5rem;
+				}
+				h6 {
+					text-align: center;
+					font-size: 1rem;
+				}
 			}
-		}
-		.staffCardModalClose {
-			padding: 0.25em;
-			position: fixed;
-			top: 0;
-			right: 0;
-			margin: 0.1em;
-			font-size: 1.5rem;
-			border: transparent;
-			background: transparent;
-			color: rgb(209, 81, 117);
-			transition: color 0.1s linear;
-		}
-		.staffCardModalClose:hover {
-			cursor: pointer;
-			color: rgb(209, 81, 117);
+			.staffCardModalClose {
+				padding: 0.25em;
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 0.1em;
+				font-size: 1.5rem;
+				border: transparent;
+				background: transparent;
+			}
+			.staffCardModalClose:hover {
+				cursor: pointer;
+			}
+
+			// .btn-previous,
+			// .btn-next {
+			// 	position: absolute;
+			// 	top: 25%;
+			// 	font-size: 2rem;
+			// 	margin: 0.25em;
+			// 	padding: 0.25em;
+			// 	transform: translateY(-50%);
+			// 	background: rgba(0, 0, 0, 0.3);
+			// 	border: transparent;
+			// 	color: white;
+			// }
+			// button:hover {
+			// 	cursor: pointer;
+			// }
+			// .btn-previous {
+			// 	left: 0;
+			// }
+			// .btn-next {
+			// 	right: 0;
+			// }
 		}
 	}
 	.staffCardModal::backdrop {
-		background: rgba(0, 0, 0, 0.322);
+		background: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(0.15em);
 	}
 }
 .modal-open {
@@ -748,18 +642,16 @@ header {
 		text-transform: uppercase;
 	}
 	iframe {
-		// margin-top: 2em;
-		max-width: 1000px;
-		border-radius: 1em;
 		box-shadow: 0 2px 5px black;
 	}
-	&-info {
-		margin-block: 1em;
+	h4 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
 
-		h4 {
-			font-size: 1.5rem;
-			text-transform: uppercase;
-		}
+	&-info {
+		// margin-block: 1em;
+
 		p {
 			padding-block: 0.5em;
 			font-size: 1rem;
@@ -944,8 +836,8 @@ header {
 	scroll-snap-type: inline mandatory;
 
 	table {
-		border-top-left-radius: 2em; ////////last changed
-		border-top-right-radius: 2em; ////////last changed
+		// border-top-left-radius: 2em; ////////last changed
+		// border-top-right-radius: 2em; ////////last changed
 		background-color: #0000001f;
 
 		th {
@@ -961,12 +853,12 @@ header {
 				rgba(156, 49, 81, 1) 55%
 			);
 		}
-		th:nth-child(1) {
-			border-top-left-radius: 1.5em; ////////last changed
-		}
-		th:last-child {
-			border-top-right-radius: 1.5em; ////////last changed
-		}
+		// th:nth-child(1) {
+		// 	border-top-left-radius: 1.5em; ////////last changed
+		// }
+		// th:last-child {
+		// 	border-top-right-radius: 1.5em; ////////last changed
+		// }
 		td {
 			scroll-snap-align: center;
 			position: relative;
@@ -1096,7 +988,8 @@ header {
 		border-radius: 1.5em;
 		text-shadow: none;
 		box-shadow: 0 3px 5px black;
-		animation: modalSlideIn 0.6s forwards ease-out;
+		animation: modalSlideIn 0.3s forwards ease-out;
+
 		.cross-btn {
 			padding: 0.3em;
 			position: absolute;
@@ -1273,6 +1166,9 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		.map-info-container {
+			margin-top: 1em;
+		}
 	}
 
 	footer {
@@ -1289,12 +1185,23 @@ footer {
 			align-items: center;
 		}
 	}
-	.staffCardModal {
-		.img-box {
-			img {
-				max-height: 30em;
+	// .staffCardModal {
+	// 	img {
+	// 		max-height: 30em;
+	// 	}
+	// }
+	.staffCardModal-container {
+		.staffCardModal-textBox {
+			padding-bottom: 0.25em;
+			p {
+				padding: 0.75em;
+				max-height: 11em;
+				overflow-y: scroll;
 			}
 		}
+	}
+	.white {
+		color: white;
 	}
 }
 
@@ -1430,15 +1337,25 @@ footer {
 		}
 	}
 	.map-box {
-		min-width: 100%;
+		// min-width: 100%;
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		gap: 2em;
-
+		iframe {
+			width: 90svw;
+		}
 		.map-info {
+			min-width: 100%;
+			display: flex;
+			justify-content: center;
+			align-content: stretch;
+			flex-wrap: wrap;
+
 			p {
 				padding-block: 1em;
+				margin-inline: 1em;
 				text-wrap: nowrap;
 			}
 			img {
@@ -1447,11 +1364,7 @@ footer {
 			}
 		}
 	}
-	.staffCardModal {
-		.img-box {
-			margin: auto;
-		}
-	}
+
 	footer {
 		.wrapper {
 			//////dodane
@@ -1520,6 +1433,31 @@ footer {
 			padding: 0.5em;
 		}
 	}
+	.staffCardModal-container {
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		.staffCardModal-textBox {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		h5 {
+			margin-top: 2em;
+		}
+		h6 {
+			margin-top: 1em;
+		}
+		p {
+			min-height: 15em;
+			margin-top: 2em;
+			margin: 1em;
+		}
+	}
+	.white {
+		color: black;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1552,14 +1490,20 @@ footer {
 			}
 		}
 	}
-	.staffCardModal {
-		.img-box {
-			img {
-				object-position: center;
-			}
-		}
-		.staffCardModal-textBox {
-			padding-inline: 1em;
+	// .staffCardModal {
+	// 	.img-box {
+	// 		img {
+	// 			object-position: center;
+	// 		}
+	// 	}
+	// 	.staffCardModal-textBox {
+	// 		padding-inline: 1em;
+	// 	}
+	// }
+	.staffCardModal-textBox {
+		p {
+			font-size: 1.1rem;
+			min-height: 20em;
 		}
 	}
 }
